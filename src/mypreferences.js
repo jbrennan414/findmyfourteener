@@ -5,7 +5,7 @@ class Mypreferences extends Component {
   render() {
     return (
       <div className="preferences">
-        <h5>Filter</h5>
+        <h3>WHAT CHU WANT</h3>
             {/* hike distance */}
             <label
                 for="hikeDistance"

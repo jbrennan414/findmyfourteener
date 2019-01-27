@@ -38,11 +38,14 @@
 /* MY PREFERENCES */
 .preferences {
   border: 1px solid black;
-}
+  padding: 20px;
+  text-align: center;
 
+}
 
 .App {
   text-align: center;
+  padding: 20px;
 }
 
 .App-link {
