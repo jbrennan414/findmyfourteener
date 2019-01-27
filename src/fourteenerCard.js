@@ -1,29 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-
-class fourteenerCard extends Component {
+class FourteenerCard extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FOOBAR          
-        </a>
-        </header>
+      <div className="fourteenerCard">
+        <div className="mtnTitleBar">
+          <h3>MT. EVANS</h3>
+        </div>
+          <p>This is where a we'll include some details about the mountain</p>
       </div>
     );
   }
 }
 
-export default fourteenerCard;
+export default FourteenerCard;

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import FourteenerCard from './fourteenerCard';
+import Header from './header';
+import Myoptions from './myoptions';
 
 
 class App extends Component {
   render() {
     return (
-        <FourteenerCard />
+        <div>
+          <Header />
+          <Myoptions />
+        </div>
     );
   }
 }
