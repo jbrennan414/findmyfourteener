@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import FourteenerCard from './fourteenerCard';
 
-class Myoptions extends Component {
+export class Myoptions extends Component {
+
+constructor (props) {
+  super(props);
+  this.state = {
+    
+  }
+}
+
   render() {
     return (
       <div className="App">
