@@ -21,6 +21,12 @@
   margin-bottom: 10px;
 }
 
+.fourteenerCard img {
+  width: 250px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
 .mtnTitleBar {
   background-color: #336B87;
   color: white;
@@ -28,6 +34,12 @@
   display: flex;
   justify-content: center;
 }
+
+/* MY PREFERENCES */
+.preferences {
+  border: 1px solid black;
+}
+
 
 .App {
   text-align: center;
