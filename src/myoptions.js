@@ -2,26 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 import FourteenerCard from './fourteenerCard';
 
-export class Myoptions extends Component {
+const Myoptions = (props) => (
 
-constructor (props) {
-  super(props);
-  this.state = {
+  <div className="App">
+
+    <FourteenerCard
+      {...props}
+    />
     
-  }
-}
-
-  render() {
-    return (
-      <div className="App">
-
-        <FourteenerCard />
-        <FourteenerCard />
-        <FourteenerCard />
-        
-      </div>
-    );
-  }
-}
+  </div>
+);
 
 export default Myoptions;
