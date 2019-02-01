@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-import './App.css';
 import FourteenerCard from './fourteenerCard';
 
-const Myoptions = (props) => (
+const fourteeners = [
+  {name:'MT. ELBERT', hikeDistance: "8.5", distanceFromDenver:"60", altitude:"14433", totalGain:"4150"},
+  {name:'MT. MASSIVE', hikeDistance: "7.25", distanceFromDenver:"135", altitude:"14421", totalGain:"3950"},
+  {name:'MT. HARVARD', hikeDistance: "11.50", distanceFromDenver:"147", altitude:"14420", totalGain:"4250"},
+  {name:'BLANCA PEAK', hikeDistance: "11.00", distanceFromDenver:"246", altitude:"14345", totalGain:"3900"},
+  {name:'LA PLATA PEAK', hikeDistance: "7.00", distanceFromDenver:"148", altitude:"14336", totalGain:"3380"},
+  {name:'UNCOMPAHGRE PEAK', hikeDistance: "7.50", distanceFromDenver:"269", altitude:"14309", totalGain:"3000"},
+  {name:'CRESTONE PEAK', hikeDistance: "8.00", distanceFromDenver:"176", altitude:"14294", totalGain:"4300"},
+  {name:'MT. LINCOLN', hikeDistance: "4.75", distanceFromDenver:"108", altitude:"14286", totalGain:"3400"},
 
-  <div className="App">
 
-    <FourteenerCard
-      {...props}
-    />
-    
-  </div>
-);
+]
 
-export default Myoptions;
+class Myoptions extends Component {
+  render(props) {
+    return(
+      <div>
+        {fourteeners.map((m, index) =>(
+          <FourteenerCard key={index} mountain={m} index={index} />
+        ))}
+      </div>
+    )
+  }
+}
+export default Myoptions

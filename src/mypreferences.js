@@ -6,10 +6,7 @@ class Mypreferences extends Component {
     return (
       <div className="preferences">
         <h3>WHAT CHU WANT</h3>
-            {/* hike distance */}
-            <label
-                for="hikeDistance"
-            >Hike Distance</label>
+            <label>Hike Distance</label>
             <input
                 name="hikeDistance"
                 type="range"
@@ -17,9 +14,7 @@ class Mypreferences extends Component {
                 min="0"
                 max="40"
             /><br />
-            <label
-                for="distanceFromDenver"
-            >Distance From Denver</label>
+            <label>Distance From Denver</label>
             <input
                 name="distanceFromDenver"
                 type="range"
@@ -27,9 +22,7 @@ class Mypreferences extends Component {
                 min="0"
                 max="300"
             /><br />
-           <label
-                for="altitude"
-            >Altitude</label>
+           <label>Altitude</label>
             <input
                 name="altitude"
                 type="range"
@@ -37,9 +30,7 @@ class Mypreferences extends Component {
                 min="14000"
                 max="14439"
             /><br />
-            <label
-                for="Total Gain"
-            >Total Gain</label>
+            <label>Total Gain</label>
             <input
                 name="totalGain"
                 type="range"
