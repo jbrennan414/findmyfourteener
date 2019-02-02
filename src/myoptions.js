@@ -25,6 +25,10 @@ const fourteeners = [
   {name:'CRESTONE NEEDLE', hikeDistance: "8.00", distanceFromDenver:"144", altitude:"14197", totalGain:"4300"},
   {name:'MT. YALE', hikeDistance: "9.50", distanceFromDenver:"169", altitude:"14196", totalGain:"4300"},
   {name:'MT. BROSS', hikeDistance: "3.50", distanceFromDenver:"108", altitude:"14172", totalGain:"2250"},
+  {name:'KIT CARSON PEAK', hikeDistance: "9.50", distanceFromDenver:"220", altitude:"14165", totalGain:"2850"},
+  {name:'EL DIENTE PEAK', hikeDistance: "5.00", distanceFromDenver:"352", altitude:"14159", totalGain:"3200"},
+  {name:'MAROON PEAK', hikeDistance: "8.00", distanceFromDenver:"229", altitude:"14156", totalGain:"4556"},
+  {name:'TABEGUACHE PEAK', hikeDistance: "7.50", distanceFromDenver:"209", altitude:"14155", totalGain:"4600"},
 
 ]
 
