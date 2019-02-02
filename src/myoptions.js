@@ -13,6 +13,13 @@ const fourteeners = [
   {name:'GRAYS PEAK', hikeDistance: "6.50", distanceFromDenver:"63", altitude:"14270", totalGain:"3000"},
   {name:'MT. ANTERO', hikeDistance: "16.00", distanceFromDenver:"156", altitude:"14269", totalGain:"5200"},
   {name:'TORREYS PEAK', hikeDistance: "6.00", distanceFromDenver:"63", altitude:"14267", totalGain:"3000"},
+  {name:'CASTLE PEAK', hikeDistance: "12.00", distanceFromDenver:"236", altitude:"14265", totalGain:"4400"},
+  {name:'QUANDARY PEAK', hikeDistance: "2.00", distanceFromDenver:"99", altitude:"14265", totalGain:"2575"},
+  {name:'MT. EVANS', hikeDistance: "2.00", distanceFromDenver:"60", altitude:"14264", totalGain:"1500"},
+  {name:'LONGS PEAK', hikeDistance: "13.00", distanceFromDenver:"75", altitude:"14255", totalGain:"5300"},
+  {name:'MT. WILSON', hikeDistance: "6.00", distanceFromDenver:"348", altitude:"14246", totalGain:"800"},
+  {name:'MT. CAMERON', hikeDistance: "2.50", distanceFromDenver:"348", altitude:"14238", totalGain:"800"},
+
 ]
 
 class Myoptions extends Component {
