@@ -19,6 +19,12 @@ const fourteeners = [
   {name:'LONGS PEAK', hikeDistance: "13.00", distanceFromDenver:"75", altitude:"14255", totalGain:"5300"},
   {name:'MT. WILSON', hikeDistance: "6.00", distanceFromDenver:"348", altitude:"14246", totalGain:"800"},
   {name:'MT. CAMERON', hikeDistance: "2.50", distanceFromDenver:"348", altitude:"14238", totalGain:"800"},
+  {name:'MT. SHAVANO', hikeDistance: "7.50", distanceFromDenver:"208", altitude:"14229", totalGain:"4000"},
+  {name:'MT. PRINCETON', hikeDistance: "6.50", distanceFromDenver:"208", altitude:"14197", totalGain:"3200"},
+  {name:'MT. BELFORD', hikeDistance: "8.00", distanceFromDenver:"144", altitude:"14197", totalGain:"4500"},
+  {name:'CRESTONE NEEDLE', hikeDistance: "8.00", distanceFromDenver:"144", altitude:"14197", totalGain:"4300"},
+  {name:'MT. YALE', hikeDistance: "9.50", distanceFromDenver:"169", altitude:"14196", totalGain:"4300"},
+  {name:'MT. BROSS', hikeDistance: "3.50", distanceFromDenver:"108", altitude:"14172", totalGain:"2250"},
 
 ]
 
