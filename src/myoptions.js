@@ -62,6 +62,8 @@ const fourteeners = [
   {name:'SUNSHINE PEAK', hikeDistance: "7.00", distanceFromDenver:"275", altitude:"14001", totalGain:"4600"},
 ]
 
+//This is a comment to figure out if git is working now
+
 class Myoptions extends Component {
   render(props) {
     return(
