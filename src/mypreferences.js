@@ -5,10 +5,10 @@ class Mypreferences extends Component {
     constructor(props){
         super(props);
         this.state = { 
-            hikeDistance: '',
-            distanceFromDenver:'',
-            altitude:'',
-            totalGain:'',
+            hikeDistance: '40',
+            distanceFromDenver:'300',
+            altitude:'14439',
+            totalGain:'6000',
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,14 +22,11 @@ class Mypreferences extends Component {
         this.setState({
             [name]: value});
 
-
-        console.log('11111111', value);
-        console.log('22222222', name);
-
     }
 
 
   render() {
+
     return (
       <div className="preferences">
         <h3>WHAT CHU WANT</h3>
@@ -69,7 +66,7 @@ class Mypreferences extends Component {
                 type="range"
                 id="totalGain"
                 min="400"
-                max="3000"
+                max="6000"
                 onChange={this.handleChange}
                 value={this.state.totalGain}
             />

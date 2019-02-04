@@ -59,16 +59,25 @@ const fourteeners = [
   {name:'NORTH MAROON PEAK', hikeDistance: "9.25", distanceFromDenver:"229", altitude:"14014", totalGain:"4500"},
   {name:'MT. OF THE HOLY CROSS', hikeDistance: "12.00", distanceFromDenver:"111", altitude:"14005", totalGain:"5600"},
   {name:'HURON PEAK', hikeDistance: "6.50", distanceFromDenver:"152", altitude:"14003", totalGain:"3500"},
-  {name:'SUNSHINE PEAK', hikeDistance: "7.00", distanceFromDenver:"275", altitude:"14001", totalGain:"4600"},
+  {name:'SUNSHINE PEAK', hikeDistance: "7.0", distanceFromDenver:"275", altitude:"14001", totalGain:"4600"},
 ]
-
-//This is a comment to figure out if git is working now
 
 class Myoptions extends Component {
   render(props) {
+
+    console.log('55555555', fourteeners[3])
+
+    const myOptions = fourteeners.filter(fourteener => 
+      fourteener.hikeDistance <= 10 && 
+      fourteener.distanceFromDenver <= 100 &&
+      fourteener.altitude <= 14500 &&
+      fourteener.totalGain <= 10000) ;
+
+
+
     return(
       <div>
-        {fourteeners.map((m, index) =>(
+        {myOptions.map((m, index) =>(
           <FourteenerCard key={index} mountain={m} index={index} />
         ))}
       </div>
