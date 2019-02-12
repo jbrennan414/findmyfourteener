@@ -5,7 +5,7 @@ import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
 
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -24,10 +24,10 @@ class App extends React.Component {
 
   render() {
 
-    console.log('@@@@@@@ this.state', this.state);
       return (
         <div>
           <Header />
+          <Mypreferences />
           <Myoptions action={this.childHandler} />
         </div>
       )
