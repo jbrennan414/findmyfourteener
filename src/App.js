@@ -1,36 +1,44 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './header';
-import Myoptions from './myoptions';
+// import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
 
-
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super();
+    this.handleData = this.handleData.bind(this);
     this.state = {
-        data: "Default parent state"
+      fromChild: '',
+      inputField: '',
+      hikeDistance: '40',
+      distanceFromDenver:'300',
+      altitude:'14439',
+      totalGain:'6000',
     };
-    
-    this.childHandler = this.childHandler.bind(this)
   }
+  
+  handleData(data) {
+    console.log('heres the handleData -->', data);
 
-  childHandler(dataFromChild) {
-      console.log('%cPrevious Parent State: ' + JSON.stringify(this.state), "color:orange");
-      this.setState({
-          data: dataFromChild
-      },() => console.log('Updated Parent State:', this.state));
+    this.setState({
+      fromChild: data,
+      inputField: data,
+      hikeDistance: data,
+      distanceFromDenver: data,
+      altitude: data,
+      totalGain: data,
+    });
   }
-
+  
   render() {
-
-      return (
-        <div>
-          <Header />
-          <Mypreferences />
-          <Myoptions action={this.childHandler} />
-        </div>
-      )
+    return (
+      <div>
+        <Header />
+        <Mypreferences handlerFromParent={this.handleData} /> 
+        <h5>Received by parent:<br />{this.state.fromChild}</h5>
+      </div>
+    );
   }
 }
 

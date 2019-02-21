@@ -74,7 +74,7 @@ class Myoptions extends Component {
 
       return (
         <div>
-          <a onClick={() => this.props.action('Set Parent state set from child: ' + fourteeners)}>Update Parent</a>;
+          <a onClick={() => this.props.action('Set Parent state set from child: ' + myOptions)}>Update Parent</a>;
             {myOptions.map((m, index) =>(
             <FourteenerCard key={index} mountain={m} index={index} />
          ))}
