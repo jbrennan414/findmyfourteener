@@ -4,9 +4,7 @@ class Mypreferences extends Component {
     constructor() {
       super();
       this.handleChange = this.handleChange.bind(this);
-      this.submitHandler = this.submitHandler.bind(this);
       this.state = {
-        inputField: '',
         hikeDistance: '40',
         distanceFromDenver:'300',
         altitude:'14439',
@@ -14,29 +12,28 @@ class Mypreferences extends Component {
       };
     }
     
-    submitHandler(evt) {
-      evt.preventDefault();
-      // pass the input field value to the event handler passed
-      // as a prop by the parent (App)
-      this.props.handlerFromParent(this.state.inputField);
-      
-      this.setState({
-        inputField: '',
-        hikeDistance:'',
-      });
-    }
-    
     handleChange(event) {
-
       const target = event.target;
       const name = target.name;
       const value = target.value;
 
-      console.log("111111111111", name, value)
-
-      this.setState({
-        [name]: value
-      });
+      console.log("####### name: ", name);
+      console.log("$$$$$$$ value: ", value);
+      
+      switch (name) {
+        case 'hikeDistance':
+          this.setState({ 'hikeDistance': value})
+          break;
+          case 'distanceFromDenver':
+          this.setState({ 'distanceFromDenver': value})
+          break;
+          case 'altitude':
+          this.setState({ 'altitude': value})
+          break;
+          case 'totalGain':
+          this.setState({ 'totalGain': value})
+          break;
+      }
 
       this.props.handlerFromParent(this.state[name]);
     }
@@ -87,7 +84,6 @@ class Mypreferences extends Component {
             onChange={this.handleChange}
             value={this.state.totalGain}
           />
-          <h5>Visible in child:<br />{this.state.inputField}</h5>
         </div>
       );
     }

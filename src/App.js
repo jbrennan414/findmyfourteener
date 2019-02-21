@@ -9,8 +9,6 @@ class App extends Component {
     super();
     this.handleData = this.handleData.bind(this);
     this.state = {
-      fromChild: '',
-      inputField: '',
       hikeDistance: '40',
       distanceFromDenver:'300',
       altitude:'14439',
@@ -22,8 +20,6 @@ class App extends Component {
     console.log('heres the handleData -->', data);
 
     this.setState({
-      fromChild: data,
-      inputField: data,
       hikeDistance: data,
       distanceFromDenver: data,
       altitude: data,
@@ -36,7 +32,11 @@ class App extends Component {
       <div>
         <Header />
         <Mypreferences handlerFromParent={this.handleData} /> 
-        <h5>Received by parent:<br />{this.state.fromChild}</h5>
+        <h5>Hike Distance:<br />{this.state.hikeDistance}</h5>
+        <h5>Distance from Denver:<br />{this.state.distanceFromDenver}</h5>
+        <h5>Altitude:<br />{this.state.altitude}</h5>
+        <h5>Total Gain:<br />{this.state.totalGain}</h5>
+        <h5></h5>
       </div>
     );
   }
