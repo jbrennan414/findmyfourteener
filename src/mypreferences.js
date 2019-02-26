@@ -21,6 +21,10 @@ class Mypreferences extends Component {
         [name]: value
       };
 
+      this.setState({
+        [name]:value
+      })
+
       this.props.handlerFromParent(preferenceData);
     }
 
