@@ -64,20 +64,19 @@ const fourteeners = [
 
 class Myoptions extends Component {
 
-  render(props) {
-    const myOptions = fourteeners.filter(fourteener => 
-      fourteener.hikeDistance <= 10 && 
-      fourteener.distanceFromDenver <= 100 &&
-      fourteener.altitude <= 14500 &&
-      fourteener.totalGain <= 10000) ;
+  render() {
 
+    const myOptions = fourteeners.filter(fourteener => 
+      fourteener.hikeDistance >= this.props.data.hikeDistance && 
+      fourteener.distanceFromDenver <= this.props.data.distanceFromDenver &&
+      fourteener.altitude <= this.props.data.altitude &&
+      fourteener.totalGain <= this.props.data.totalGain);
 
       return (
         <div>
-          <a onClick={() => this.props.action('Set Parent state set from child: ' + myOptions)}>Update Parent</a>;
             {myOptions.map((m, index) =>(
-            <FourteenerCard key={index} mountain={m} index={index} />
-         ))}
+              <FourteenerCard key={index} mountain={m} index={index} />
+            ))}
         </div>
       )
   }

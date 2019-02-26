@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './header';
-// import Myoptions from './myoptions';
+import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
 
 class App extends Component {
@@ -26,6 +26,7 @@ class App extends Component {
   }
   
   render() {
+
     return (
       <div>
         <Header />
@@ -34,7 +35,7 @@ class App extends Component {
         <h5>Distance from Denver:<br />{this.state.distanceFromDenver}</h5>
         <h5>Altitude:<br />{this.state.altitude}</h5>
         <h5>Total Gain:<br />{this.state.totalGain}</h5>
-        <h5></h5>
+        <Myoptions data={this.state} />
       </div>
     );
   }
