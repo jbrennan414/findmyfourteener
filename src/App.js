@@ -17,10 +17,11 @@ class App extends Component {
   }
   
   handleData(data) {
-    console.log('heres the handleData -->', data);
+    var preferenceKey = Object.keys(data)[0];
+    var preferenceValue = Object.values(data)[0];
 
     this.setState({
-      data
+      [preferenceKey]: preferenceValue
     });
   }
   
