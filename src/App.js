@@ -20,10 +20,7 @@ class App extends Component {
     console.log('heres the handleData -->', data);
 
     this.setState({
-      hikeDistance: data,
-      distanceFromDenver: data,
-      altitude: data,
-      totalGain: data,
+      data
     });
   }
   

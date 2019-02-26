@@ -17,25 +17,11 @@ class Mypreferences extends Component {
       const name = target.name;
       const value = target.value;
 
-      console.log("####### name: ", name);
-      console.log("$$$$$$$ value: ", value);
-      
-      switch (name) {
-        case 'hikeDistance':
-          this.setState({ 'hikeDistance': value})
-          break;
-          case 'distanceFromDenver':
-          this.setState({ 'distanceFromDenver': value})
-          break;
-          case 'altitude':
-          this.setState({ 'altitude': value})
-          break;
-          case 'totalGain':
-          this.setState({ 'totalGain': value})
-          break;
-      }
+      const preferenceData = {
+        [name]: value
+      };
 
-      this.props.handlerFromParent(this.state[name]);
+      this.props.handlerFromParent(preferenceData);
     }
 
     render() {
