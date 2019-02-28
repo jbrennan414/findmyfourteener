@@ -31,10 +31,6 @@ class App extends Component {
       <div>
         <Header />
         <Mypreferences handlerFromParent={this.handleData} /> 
-        <h5>Hike Distance:<br />{this.state.hikeDistance}</h5>
-        <h5>Distance from Denver:<br />{this.state.distanceFromDenver}</h5>
-        <h5>Altitude:<br />{this.state.altitude}</h5>
-        <h5>Total Gain:<br />{this.state.totalGain}</h5>
         <Myoptions data={this.state} />
       </div>
     );

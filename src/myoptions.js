@@ -74,7 +74,7 @@ class Myoptions extends Component {
     );
 
       return (
-        <div>
+        <div className="myOptions">
             {myOptions.map((m, index) =>(
               <FourteenerCard key={index} mountain={m} index={index} />
             ))}
