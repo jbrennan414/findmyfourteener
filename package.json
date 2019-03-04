@@ -1,7 +1,7 @@
 {
   "name": "find-my-fourteener",
   "version": "0.1.0",
-  "homepage": "https://findmyfourteener.com",
+  "homepage": "https://jpb55116.github.io/find-my-fourteener",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
