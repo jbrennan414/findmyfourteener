@@ -1,7 +1,6 @@
 {
   "name": "find-my-fourteener",
   "version": "0.1.0",
-  "homepage": "https://jpb55116.github.io/find-my-fourteener",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
@@ -10,10 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
