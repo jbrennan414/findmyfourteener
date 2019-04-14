@@ -14,8 +14,6 @@ class App extends Component {
       altitude:'14439',
       totalGain:'6000',
     };
-
-    this.initializeReactGA = this.initializeReactGA.bind(this)
   }
   
   handleData(data) {

@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ReactGA from 'react-ga';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
 function initializeReactGA() {
-    console.log("Initializing Google Analtyics")
+    console.log("Initializing Google Analytics")
     ReactGA.initialize('UA-138338052-1');
 }
 
