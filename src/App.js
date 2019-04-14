@@ -3,7 +3,6 @@ import './App.css';
 import Header from './header';
 import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
-import ReactGA from 'react-ga';
 
 class App extends Component {
   constructor() {
@@ -28,15 +27,7 @@ class App extends Component {
     });
   }
 
-  initializeReactGA() {
-    console.log("Initializing Google Analytics");
-    ReactGA.initialize('UA-UA-138338052-1');
-    ReactGA.pageview('/homepage');
-  };
-
   render() {
-
-    initializeReactGA();
 
     return (
       <div>
