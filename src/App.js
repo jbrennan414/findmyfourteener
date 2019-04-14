@@ -3,6 +3,8 @@ import './App.css';
 import Header from './header';
 import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
+import ReactGA from 'react-ga';
+
 
 class App extends Component {
   constructor() {
@@ -24,6 +26,10 @@ class App extends Component {
       [preferenceKey]: preferenceValue
     });
   }
+
+  initializeReactGA() {
+    ReactGA.initialize('UA-138338052-1');
+}
   
   render() {
 
