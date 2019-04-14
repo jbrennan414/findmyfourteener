@@ -8,7 +8,6 @@ import ReactGA from 'react-ga';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 function initializeReactGA() {
-    console.log("Initializing Google Analytics")
     ReactGA.initialize('UA-138338052-1');
     ReactGA.pageview('/homepage');
 }
