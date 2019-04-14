@@ -5,7 +5,6 @@ import Myoptions from './myoptions';
 import Mypreferences from './mypreferences';
 import ReactGA from 'react-ga';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -16,8 +15,6 @@ class App extends Component {
       altitude:'14439',
       totalGain:'6000',
     };
-    ReactGA.pageview('/homepage');
-    ReactGA.initialize('UA-138338052-1'); // Here we should use our GA id
   }
   
   handleData(data) {
@@ -29,7 +26,15 @@ class App extends Component {
     });
   }
 
+  initializeReactGA() {
+    ReactGA.initialize('UA-UA-138338052-1');
+    ReactGA.pageview('/homepage');
+  };
+
   render() {
+
+    this.initializeReactGA();
+
     return (
       <div>
         <Header />
