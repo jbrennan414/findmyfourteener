@@ -16,6 +16,8 @@ class App extends Component {
       altitude:'14439',
       totalGain:'6000',
     };
+    ReactGA.pageview('/homepage');
+    ReactGA.initialize('UA-138338052-1'); // Here we should use our GA id
   }
   
   handleData(data) {
@@ -28,11 +30,6 @@ class App extends Component {
   }
 
   render() {
-    ReactGA.pageview('/homepage');
-    ReactGA.initialize('UA-138338052-1'); // Here we should use our GA id
-
-
-
     return (
       <div>
         <Header />
