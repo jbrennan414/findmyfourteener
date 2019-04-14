@@ -15,6 +15,8 @@ class App extends Component {
       altitude:'14439',
       totalGain:'6000',
     };
+
+    this.initializeReactGA = this.initializeReactGA.bind(this)
   }
   
   handleData(data) {
@@ -27,6 +29,7 @@ class App extends Component {
   }
 
   initializeReactGA() {
+    console.log("Initializing Google Analytics");
     ReactGA.initialize('UA-UA-138338052-1');
     ReactGA.pageview('/homepage');
   };
