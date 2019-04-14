@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
 
-    this.initializeReactGA();
+    initializeReactGA();
 
     return (
       <div>
