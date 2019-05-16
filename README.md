@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Find my Fourteener Colors
+#90AFC5 (mist)
+#336B86 (stone)
+#2A3132 (shadow)
+#763626 (autumn foliage)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
