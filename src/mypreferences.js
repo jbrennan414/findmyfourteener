@@ -5,10 +5,10 @@ class Mypreferences extends Component {
       super();
       this.handleChange = this.handleChange.bind(this);
       this.state = {
-        hikeDistance: '17',
-        distanceFromDenver:'300',
-        altitude:'14439',
-        totalGain:'6000',
+        hikeDistance: '18',
+        distanceFromDenver:'400',
+        altitude:'14440',
+        totalGain:'6300',
       };
     }
     
@@ -37,7 +37,7 @@ class Mypreferences extends Component {
             type="range"
             id="hikeDistance"
             min="0"
-            max="17"
+            max="18"
             onChange={this.handleChange}
             value={this.state.hikeDistance}
           />
@@ -49,7 +49,7 @@ class Mypreferences extends Component {
             type="range"
             id="distanceFromDenver"
             min="0"
-            max="300"
+            max="400"
             onChange={this.handleChange}
             value={this.state.distanceFromDenver}
           />
@@ -61,7 +61,7 @@ class Mypreferences extends Component {
             type="range"
             id="altitude"
             min="14000"
-            max="14439"
+            max="14440"
             onChange={this.handleChange}
             value={this.state.altitude}
           />
@@ -73,7 +73,7 @@ class Mypreferences extends Component {
             type="range"
             id="totalGain"
             min="400"
-            max="6000"
+            max="6300"
             onChange={this.handleChange}
             value={this.state.totalGain}
           />
