@@ -9,10 +9,10 @@ class App extends Component {
     super();
     this.handleData = this.handleData.bind(this);
     this.state = {
-      hikeDistance: '17',
-      distanceFromDenver:'300',
-      altitude:'14439',
-      totalGain:'6000',
+      hikeDistance: '18',
+      distanceFromDenver:'400',
+      altitude:'14440',
+      totalGain:'6300',
     };
   }
   
