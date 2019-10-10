@@ -1,36 +1,37 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 class Mypreferences extends Component {
-    constructor() {
-      super();
-      this.handleChange = this.handleChange.bind(this);
-      this.state = {
-        hikeDistance: '18',
-        distanceFromDenver:'400',
-        altitude:'14440',
-        totalGain:'6300',
-      };
-    }
-    
-    handleChange(event) {
-      const target = event.target;
-      const name = target.name;
-      const value = target.value;
+  constructor() {
+    super();
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      hikeDistance: "18",
+      distanceFromDenver: "400",
+      altitude: "14440",
+      totalGain: "6300"
+    };
+  }
 
-      const preferenceData = {
-        [name]: value
-      };
+  handleChange(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
 
-      this.setState({
-        [name]:value
-      })
+    const preferenceData = {
+      [name]: value
+    };
 
-      this.props.handlerFromParent(preferenceData);
-    }
+    this.setState({
+      [name]: value
+    });
 
-    render() {
-      return (
-        <div className="preferences">
+    this.props.handlerFromParent(preferenceData);
+  }
+
+  render() {
+    return (
+      <div className="preferences">
+        <div className="preference hike-distance">
           <label>Hike Distance</label>
           <input
             name="hikeDistance"
@@ -41,8 +42,10 @@ class Mypreferences extends Component {
             onChange={this.handleChange}
             value={this.state.hikeDistance}
           />
-          <label>{this.state.hikeDistance}</label>
-          <br />
+          <label>{this.state.hikeDistance} mi.</label>
+        </div>
+        <br />
+        <div className="preference denver-distance">
           <label>Distance From Denver</label>
           <input
             name="distanceFromDenver"
@@ -53,8 +56,10 @@ class Mypreferences extends Component {
             onChange={this.handleChange}
             value={this.state.distanceFromDenver}
           />
-          <label>{this.state.distanceFromDenver}</label>
-          <br />
+          <label>{this.state.distanceFromDenver} mi.</label>
+        </div>
+        <br />
+        <div className="preference altitude">
           <label>Altitude</label>
           <input
             name="altitude"
@@ -65,22 +70,25 @@ class Mypreferences extends Component {
             onChange={this.handleChange}
             value={this.state.altitude}
           />
-          <label>{this.state.altitude}</label>
-          <br />
-          <label>Total Gain</label>
-          <input
-            name="totalGain"
-            type="range"
-            id="totalGain"
-            min="400"
-            max="6300"
-            onChange={this.handleChange}
-            value={this.state.totalGain}
-          />
-          <label>{this.state.totalGain}</label>
+          <label>{this.state.altitude} ft.</label>
         </div>
-      );
-    }
+        <br />
+        <div className="preference gain">
+        <label>Total Gain</label>
+        <input
+          name="totalGain"
+          type="range"
+          id="totalGain"
+          min="400"
+          max="6300"
+          onChange={this.handleChange}
+          value={this.state.totalGain}
+        />
+        <label>{this.state.totalGain} ft.</label>
+        </div>
+      </div>
+    );
   }
-  
-  export default Mypreferences;
+}
+
+export default Mypreferences;

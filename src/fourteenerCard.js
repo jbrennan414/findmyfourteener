@@ -8,7 +8,7 @@ export const FourteenerCard = ({ mountain }) => {
       <div className="mtnTitleBar">
         <h3>{name}</h3>
       </div>
-      <img style={styles.img} src={imageUrl} alt={`${name} image`}></img>
+      <img style={styles.img} src={imageUrl} alt={`${name}`}></img>
       <p>Distance: {hikeDistance} mi </p>
       <p>Distance from Denver: {distanceFromDenver} mi</p>
       <p>Peak Altitude: {altitude} ft</p>

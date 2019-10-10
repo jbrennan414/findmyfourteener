@@ -6,7 +6,8 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <h1>FIND MY FOURTEENER</h1>
+        <h1>FIND MY <br/ >FOURTEENER</h1>
+        <img src={require('./mountain.svg')} alt="Mountain outline"/>
       </div>
     );
   }
