@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+:root {
+  --stone-color: #336B87;
+  --mist-color: #90AFC5;
+  --shadow-color: #2A3132;
+  --autumn-color: #763626;
+}
+
 * {
   font-family: 'Oswald', sans-serif;
 }
@@ -8,7 +15,7 @@
 .header {
   display: flex;
   justify-content: center;
-  background-color: #336B87;
+  background-color: var(--stone-color);
   color: white;
   margin-bottom: 20px;
 }
@@ -30,7 +37,7 @@
 }
 
 .mtnTitleBar {
-  background-color: #336B87;
+  background-color: var(--stone-color);
   color: white;
   height: 85px;
   display: flex;
@@ -52,22 +59,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.App {
-  text-align: center;
-  padding: 20px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
