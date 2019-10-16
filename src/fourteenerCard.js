@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 
-export const FourteenerCard = ({ mountain }) => {
+export const FourteenerCard = ({ mountain, className }) => {
   const { name, imageUrl, hikeDistance, distanceFromDenver, altitude, totalGain, range, rank } = mountain;
   return (
-    <div className="fourteenerCard">
+    <div className={`fourteenerCard ${className}`}>
       <div className="mtnTitleBar">
         <h3>{name}</h3>
       </div>
