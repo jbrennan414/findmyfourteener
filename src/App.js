@@ -10,12 +10,13 @@ class App extends Component {
     this.handleData = this.handleData.bind(this);
     this.state = {
       hikeDistance: '18',
-      distanceFromDenver:'400',
-      altitude:'14440',
-      totalGain:'6300',
+      distanceFromDenver: '400',
+      altitude: '14440',
+      totalGain: '6300',
+      expanded: true,
     };
   }
-  
+
   handleData(data) {
     var preferenceKey = Object.keys(data)[0];
     var preferenceValue = Object.values(data)[0];
@@ -26,11 +27,11 @@ class App extends Component {
   }
 
   render() {
-
+    const { expanded } = this.state;
     return (
       <div>
         <Header />
-        <Mypreferences handlerFromParent={this.handleData} /> 
+        <Mypreferences handlerFromParent={this.handleData} expanded={expanded} />
         <Myoptions data={this.state} />
       </div>
     );

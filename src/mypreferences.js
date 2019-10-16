@@ -8,15 +8,27 @@ class Mypreferences extends Component {
       hikeDistance: "18",
       distanceFromDenver: "400",
       altitude: "14440",
-      totalGain: "6300"
+      totalGain: "6300",
+      expanded: true,
     };
+  }
+
+  componentDidMount() {
+    const { expanded } = this.props
+    if (expanded) {
+      this.setState({ expanded });
+    }
   }
 
   handleChange(event) {
     const target = event.target;
     const name = target.name;
-    const value = target.value;
-
+    let value = "";
+    if (name === "expanded") {
+      value = target.checked;
+    } else {
+      value = target.value;
+    }
     const preferenceData = {
       [name]: value
     };
@@ -74,17 +86,32 @@ class Mypreferences extends Component {
         </div>
         <br />
         <div className="preference gain">
-        <label>Total Gain</label>
-        <input
-          name="totalGain"
-          type="range"
-          id="totalGain"
-          min="400"
-          max="6300"
-          onChange={this.handleChange}
-          value={this.state.totalGain}
-        />
-        <label>{this.state.totalGain} ft.</label>
+          <label>Total Gain</label>
+          <input
+            name="totalGain"
+            type="range"
+            id="totalGain"
+            min="400"
+            max="6300"
+            onChange={this.handleChange}
+            value={this.state.totalGain}
+          />
+          <label>{this.state.totalGain} ft.</label>
+        </div>
+        <br />
+
+        <div className="preference expanded">
+          <label className="container">Expand view
+          <input
+            name="expanded"
+            type="checkbox"
+            id="expanded"
+            className="checkmark"
+            checked={this.state.expanded}
+            onChange={this.handleChange}
+          />
+          <span className="checkmark"></span>
+          </label>
         </div>
       </div>
     );

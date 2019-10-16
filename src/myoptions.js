@@ -5,20 +5,23 @@ class Myoptions extends Component {
 
   render() {
 
-    var myOptions = fourteeners.filter(fourteener => 
-      Number(fourteener.hikeDistance) <= this.props.data.hikeDistance &&
-      Number(fourteener.distanceFromDenver) <= this.props.data.distanceFromDenver &&
-      Number(fourteener.altitude) <= this.props.data.altitude &&
-      Number(fourteener.totalGain) <= this.props.data.totalGain
+    const { data } = this.props;
+
+    const myOptions = fourteeners.filter(fourteener =>
+      Number(fourteener.hikeDistance) <= data.hikeDistance &&
+      Number(fourteener.distanceFromDenver) <= data.distanceFromDenver &&
+      Number(fourteener.altitude) <= data.altitude &&
+      Number(fourteener.totalGain) <= data.totalGain
     );
 
-      return (
-        <div className="myOptions">
-            {myOptions.map((m, index) =>(
-              <FourteenerCard key={index} mountain={m} index={index} />
-            ))}
-        </div>
-      )
+    const className = data.expanded ? "expanded" : "collapsed";
+    return (
+      <div className="myOptions">
+        {myOptions.map((m, index) => (
+          <FourteenerCard key={index} mountain={m} index={index} className={className} />
+        ))}
+      </div>
+    )
   }
 }
 
