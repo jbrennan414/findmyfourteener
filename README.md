@@ -9,7 +9,7 @@ This project utilizes `node package manager` or `npm` to start a local node serv
 6) Run `npm install` or `npm i` to start install all the dependanceies 
 7) Finally run `npm run start` to start findmyfourteener! 
 
-## Find my Fourteener Colors
+## FindMyFourteener Colors
 #90AFC5 (mist)
 #336B86 (stone)
 #2A3132 (shadow)
