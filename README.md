@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/82f058dd-4cb9-4533-9bec-f2040db2df04/deploy-status)](https://app.netlify.com/sites/findmyfourteener/deploys)
+
 # Getting started
 This project utilizes `node package manager` or `npm` to start a local node server and get the project running on `localhost:3000`.
 
@@ -9,7 +11,7 @@ This project utilizes `node package manager` or `npm` to start a local node serv
 6) Run `npm install` or `npm i` to start install all the dependanceies 
 7) Finally run `npm run start` to start findmyfourteener! 
 
-## Find my Fourteener Colors
+## FindMyFourteener Colors
 #90AFC5 (mist)
 #336B86 (stone)
 #2A3132 (shadow)
