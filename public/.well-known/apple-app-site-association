@@ -2,7 +2,7 @@
   "applinks": {
       "details": [
            {
-             "appIDs": [ "FPR4NYK5CD.FluentStream.fluentstream-ios", "FPR4NYK5CD.FluentStream.fluentstream-ios" ],
+             "appIDs": [ "FPR4NYK5CD.FluentStream.test-ios", "FPR4NYK5CD.FluentStream.test-ios" ],
              "components": [
                {
                   "#": "no_universal_links",
@@ -28,6 +28,6 @@
        ]
    },
    "webcredentials": {
-      "apps": [ "FPR4NYK5CD.FluentStream.fluentstream-ios" ]
+      "apps": [ "FPR4NYK5CD.FluentStream.test-ios" ]
    }
 }
