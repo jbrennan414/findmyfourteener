@@ -1,0 +1,46 @@
+name: Deploy to S3 and Invalidate CloudFront with Assume Role
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Specify the Node.js version you need
+      
+      - name: Change directories to frontend
+        run: |
+          npm install
+          npm run build
+
+      - name: Configure AWS credentials using Assume Role
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::195210670873:role/find-my-fourteener-trust-policy
+          aws-region: us-west-2
+          role-session-name: find-my-fourteener-trust-policy
+
+      - name: Sync S3 bucket
+        run: |
+          aws s3 sync ./white-out-frontend/dist ${{ secrets.FINDMYFOURTEENER_BUCKET }} --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.FINDMYFOURTEENER_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
