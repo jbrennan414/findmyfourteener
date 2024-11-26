@@ -3,7 +3,7 @@ name: Deploy to S3 and Invalidate CloudFront with Assume Role
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 permissions:
